@@ -1,1 +1,117 @@
-欢迎
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>404 Not Foun</title>
+<style>
+html, body, h1, p {
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+}
+#xwInfo {
+	position:absolute;
+	z-index:2;
+	top:50%;
+	left:50%;
+	width:700px;
+	height:240px;
+	margin-top:-140px;
+	margin-left:-350px;
+	border-top:5px solid #666;
+	border-left:5px solid #999;
+	border-right:5px solid #000;
+	border-bottom:5px solid #333;
+}
+#xwInfo #Content {
+	font-family:"Arial";
+	width:100%;
+	height:100%;
+	color:#ffffff;
+	text-align:center;
+	background-color:rgba(0, 0, 0, 0.6)!important;
+	background:#000;
+	filter:Alpha(Opacity=60);
+}
+#xwInfo #Content h1 {
+	font-size:200px;
+	line-height:200px;
+	height:200px;
+	text-align:center;
+}
+#xwInfo #Content p{
+	font-size:26px;
+	font-family:"����";
+}
+#xwInfo #Content p span,#xwInfo #Content p a{
+	text-decoration:none;
+	color:#FF0;
+}
+#xwInfo #Content * {
+	height:auto;
+	position:relative!important;
+}
+</style>
+<script>
+function xwLoad()
+{
+	var eveWidth=100;
+	var eveColor="";
+	var xwWidth=document.documentElement.clientWidth;
+	var ranNum=Math.ceil(xwWidth/eveWidth);
+	var ArrColor=new Array(20);
+	ArrColor[0]="6699cc";
+	ArrColor[1]="dee000";
+	ArrColor[2]="00dbda";
+	ArrColor[3]="03d601";
+	ArrColor[4]="d101d2";
+	ArrColor[5]="d30001";
+	ArrColor[6]="0200d1";
+	ArrColor[7]="1ed122";
+	ArrColor[8]="9900cc";
+	ArrColor[9]="3ecfd1";
+	ArrColor[10]="d1cf38";
+	ArrColor[11]="6c5ed1";
+	ArrColor[12]="b34d6e";
+	ArrColor[13]="b37022";
+	ArrColor[14]="b32ea8";
+	ArrColor[15]="99cc66";
+	ArrColor[16]="663399";
+	ArrColor[17]="996633";
+	ArrColor[18]="993333";
+	ArrColor[19]="000033";
+
+
+	for(var i=0;i<ranNum;i++)
+	{
+		if(i>=ArrColor.length)
+		{
+			eveColor=ArrColor[Math.floor(Math.random()*ArrColor.length)];
+		}
+		else
+		{
+			eveColor=ArrColor[i];
+		}
+		var div=document.createElement("div");
+		div.style.cssText="width:"+eveWidth+"px;height:100%;background-color:#"+eveColor+";position:absolute;top:0px;left:"+(eveWidth*i)+"px;";
+		document.body.appendChild(div);
+	
+	}
+}
+window.onresize = function () {
+	xwLoad();
+};
+</script>
+</head>
+<body onload="xwLoad()">
+<div id="xwInfo">
+  <div  id="Content">
+    <h1>404</h1>
+    <p>我是你爹,快叫爸爸!</p>
+  </div>
+</div>
+</body>
+</html>
