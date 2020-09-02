@@ -10,7 +10,7 @@
   <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
 </head>
 <body>
-<table class="layui-table" lay-data="{height:305, data: [{"domain": "baidu.com", "baidu_mip": "97,630,969 ~ 108,466,616", "baidu_mbr": "10", "360_qz": "", "google_sl": "-", "360_sl": "", "baidu_br": "10", "baidu_sl": "29,000,000", "alexa_ip": "51,000,000", "alexa_pv": "235,620,000", "baidu_ip": "143,417,662 ~ 159,318,029", "baidu_c": "19,001,828", "shenma_qz": "8", "qz_360": "10", "alexa": "4", "sougou_qz": "10", "google_pr": "9", "baidu_mc": "20,133,838", "sogou_sl": "14,086,324,653", "sm_sl": "354,119,954", "sl_360": "20"}, {"domain": "qq.com", "baidu_mip": "4,852,790 ~ 8,688,191", "baidu_mbr": "10", "360_qz": "", "google_sl": "-", "360_sl": "", "baidu_br": "10", "baidu_sl": "6,090,000", "alexa_ip": "49,200,000", "alexa_pv": "194,340,000", "baidu_ip": "8,153,699 ~ 13,597,620", "baidu_c": "2,505,462", "shenma_qz": "9", "qz_360": "10", "alexa": "5", "sougou_qz": "8", "google_pr": "8", "baidu_mc": "2,698,808", "sogou_sl": "2,590,156,121", "sm_sl": "1,259,006,329", "sl_360": "17"}, {"domain": "wanren.com", "baidu_mip": "1 ~ 1", "baidu_mbr": "0", "360_qz": "", "google_sl": "-", "360_sl": "", "baidu_br": "0", "baidu_sl": "-", "alexa_ip": "", "alexa_pv": "", "baidu_ip": "2 ~ 2", "baidu_c": "1", "shenma_qz": "", "qz_360": "", "alexa": "", "sougou_qz": "0", "google_pr": "0", "baidu_mc": "1", "sogou_sl": "-", "sm_sl": "-", "sl_360": "-"}]}">
+<table class="layui-table" id="test" lay-data="{height:305}">
   <thead>
 <tr>
 <th lay-data="{field:'domain', width:150,templet: '#domainTpl'}" rowspan="2">域名</th>
@@ -66,8 +66,9 @@
 <script>
 layui.use('table', function(){
   var table = layui.table;
-
-
+table.render({
+    elem: '#test',
+    data: [{"domain": "baidu.com", "baidu_mip": "97,630,969 ~ 108,466,616", "baidu_mbr": "10", "360_qz": "", "google_sl": "-", "360_sl": "", "baidu_br": "10", "baidu_sl": "29,000,000", "alexa_ip": "51,000,000", "alexa_pv": "235,620,000", "baidu_ip": "143,417,662 ~ 159,318,029", "baidu_c": "19,001,828", "shenma_qz": "8", "qz_360": "10", "alexa": "4", "sougou_qz": "10", "google_pr": "9", "baidu_mc": "20,133,838", "sogou_sl": "14,086,324,653", "sm_sl": "354,119,954", "sl_360": "20"}, {"domain": "qq.com", "baidu_mip": "4,852,790 ~ 8,688,191", "baidu_mbr": "10", "360_qz": "", "google_sl": "-", "360_sl": "", "baidu_br": "10", "baidu_sl": "6,090,000", "alexa_ip": "49,200,000", "alexa_pv": "194,340,000", "baidu_ip": "8,153,699 ~ 13,597,620", "baidu_c": "2,505,462", "shenma_qz": "9", "qz_360": "10", "alexa": "5", "sougou_qz": "8", "google_pr": "8", "baidu_mc": "2,698,808", "sogou_sl": "2,590,156,121", "sm_sl": "1,259,006,329", "sl_360": "17"}, {"domain": "wanren.com", "baidu_mip": "1 ~ 1", "baidu_mbr": "0", "360_qz": "", "google_sl": "-", "360_sl": "", "baidu_br": "0", "baidu_sl": "-", "alexa_ip": "", "alexa_pv": "", "baidu_ip": "2 ~ 2", "baidu_c": "1", "shenma_qz": "", "qz_360": "", "alexa": "", "sougou_qz": "0", "google_pr": "0", "baidu_mc": "1", "sogou_sl": "-", "sm_sl": "-", "sl_360": "-"}]
 });
 </script>
 
